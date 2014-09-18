@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Mod_Gempa extends CI_Controller {
+class Mod_Gempa extends CI_Model {
 
     public function index(){
         echo "Forbiden";
@@ -16,12 +16,18 @@ class Mod_Gempa extends CI_Controller {
             $c = 0;
             foreach($row_gempa->children() as $gempa){
                 //echo $gempa->getName(). " : " .$gempa. "<br>";
-                $ArrayGempa[$c] = array($gempa->getName()=>"$gempa");
+                if($gempa->getName()=="point"){
+                    foreach($gempa->children() as $coord){
+                        $ArrayGempa[$c] = array("point"=>"$coord");
+                    }
+                }else{
+                    $ArrayGempa[$c] = array($gempa->getName()=>"$gempa");
+                }
                 $c++;
             }
-            $ArrayGempaAll[$d] = array("current_gempa" => $ArrayGempa);
+            $ArrayGempaAll[$d] = array("id"=>$d,"current_gempa" => $ArrayGempa);
             $d++;
         }
-        return json_encode(array("data_gempa"=>$ArrayGempaAll));
+        return json_encode($ArrayGempaAll);
     }
 }

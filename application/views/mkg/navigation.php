@@ -12,8 +12,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li <?php if($this->uri->segment(2)==="index" || empty($this->uri->segment(2))===true){echo 'class="active"';}?>><a href="<?php echo site_url(); ?>/mkg/index"><span class="glyphicon glyphicon-home"></span> Beranda</a></li>
-                        <li <?php if($this->uri->segment(2)==="cuaca"){echo 'class="active"';}?>><a href="<?php echo site_url(); ?>/mkg/cuaca/jawabarat"><span class="glyphicon glyphicon-globe"></span> Prakiraan Cuaca</a></li>
-                        <li <?php if($this->uri->segment(2)==="gempa"){echo 'class="active"';}?>><a href="<?php echo site_url(); ?>/mkg/gempa"><span class="glyphicon glyphicon-map-marker"></span> Info Gempa</a></li>
+                        <li <?php if($this->uri->segment(2)==="cuaca"){echo 'class="active"';}?>><a href="<?php echo site_url(); ?>/mkg/cuaca/nad"><span class="glyphicon glyphicon-globe"></span> Prakiraan Cuaca</a></li>
+                        <li <?php if($this->uri->segment(2)==="gempa"){echo 'class="active"';}?>><a href="<?php echo site_url(); ?>/mkg/gempa/0"><span class="glyphicon glyphicon-map-marker"></span> Info Gempa</a></li>
                         <!--li class="dropdown <?php echo $r_kelola_jadwal;?>">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-calendar"></span> Kelola Jadwal<b class="caret"></b></a>
                             <ul class="dropdown-menu">
