@@ -22,7 +22,7 @@
             </script>
         </div>
         <div class="col-lg-9" style="height: 600px;">   
-            <?php echo "<pre>$respon</pre>";?>
+            <?php // echo "<pre>$respon</pre>";?>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCprEkmn5_AWMYHETXDgLD2sBlipH8jZWo"></script>
             <script type="text/javascript">
                 function initialize() {
